@@ -7,8 +7,8 @@ use Illuminate\Database\Seeder;
 use App\Models\User;
 
 
-class AdminSeeder extends Seeder
-{
+class AdminSeeder extends Seeder{
+    
     /**
      * Run the database seeds.
      */
@@ -20,6 +20,7 @@ class AdminSeeder extends Seeder
             'email_verified_at' => now(),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', //password
         ]);
+        //Assigning writer and admin role for this user.
         $user->assignRole('writer', 'admin');
     }
 }
